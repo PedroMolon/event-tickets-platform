@@ -1,0 +1,15 @@
+services:
+  event-tickets-platform-db:
+    image: postgres:16
+    container_name: event-tickets-platform-db
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - event_data:/var/lib/postgresql/data
+
+volumes:
+  event_data:
