@@ -1,0 +1,4 @@
+CREATE TABLE tb_info (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(255)
+);
